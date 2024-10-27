@@ -20,6 +20,14 @@ use PHPHtmlParser\Exceptions\LogicalException;
 class TextNode extends LeafNode
 {
     /**
+     * Adding these properties to avoid dynamic property creation warnings
+     * @var prev - This property is used to store the previous node reference
+     * @var next - This property is used to store the next node reference
+     */
+    public $prev;
+    public $next;
+
+    /**
      * This is a text node.
      *
      * @var Tag
